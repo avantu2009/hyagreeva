@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+   <header>
+    <div class="container">
+        <div class="logo">
+            <h1><a href="#">VENIA</a></h1>
+        </div>
+        <div class="nav-desktop-view">
+            <nav>
+                <ul id="nav-menu1" class="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Smart Gear</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+        <div class="nav-mobile-view">
+            <nav>
+                <div id="nav-menu" class="nav-menu">
+                   <aside class="filters nav-filters">
+            <h3>Filters</h3>
+            <p>categories</p>
+            <label>
+                <input type="checkbox" id="category-electronics1" onchange="filterByCategory1()">
+                Electronics
+            </label>
+            <label>
+                <input type="checkbox" id="category-jewelry1" onchange="filterByCategory1()">
+                Jewellery
+            </label>
+            <label>
+                <input type="checkbox" id="category-mens-clothing1" onchange="filterByCategory1()">
+                Men's Clothing
+            </label>
+            <label>
+                <input type="checkbox" id="category-womens-clothing1" onchange="filterByCategory1()">
+                Women's Clothing
+            </label>
+        </aside>
+        <button class="result-btn">See 17 Results</button>
+    </div>
+                
+            </nav>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <!-- Hamburger icon -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="cart">
+            <a href="#"><img src="./images/shopping-bag.png" alt="Cart"></a>
+        </div>
+    </div>
+</header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="./images/banner.webp" alt="Banner">
+        <div class="banner-text">
+            <h3>Men's<br> Outerwear</h3>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Men</a> > <a href="#">Outerwear</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar Filters -->
+        <aside class="filters">
+            <h3>Filters</h3>
+            <p>categories</p>
+            <label>
+                <input type="checkbox" id="category-electronics" onchange="filterByCategory()">
+                Electronics
+            </label>
+            <label>
+                <input type="checkbox" id="category-jewelry" onchange="filterByCategory()">
+                Jewellery
+            </label>
+            <label>
+                <input type="checkbox" id="category-mens-clothing" onchange="filterByCategory()">
+                Men's Clothing
+            </label>
+            <label>
+                <input type="checkbox" id="category-womens-clothing" onchange="filterByCategory()">
+                Women's Clothing
+            </label>
+        </aside>
+
+        <!-- Products Section -->
+        <section class="product-section">
+            <div id="product-count" class="product-count">0 Results</div>
+            <div class="top-bar">
+                <div class="search-bar">
+                    
+                    <input type="text" id="search-bar" placeholder="Search products..." onkeyup="searchProducts()">
+                </div>
+                <div class="sort-dropdown">
+                    <select id="sort-dropdown" onchange="sortProducts()">
+                        <option value="name">Sort by Name</option>
+                        <option value="price">Sort by Price</option>
+                    </select>
+                </div>
+                
+            </div>
+           
+            
+
+            <!-- Product Result Count -->
+            
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="product-grid">
+                <!-- Products will be loaded here via JS -->
+            </div>
+
+            <!-- Load More Button for Lazy Loading -->
+            <div id="load-more-container" style="text-align:center; margin-top:20px;">
+                <button id="load-more" onclick="loadMoreProducts()">Load More</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div>
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Order Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us!</h3>
+                <p>Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry.</p>
+                <a href="#"><img src="./images/facebook-app-symbol.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+            </div>
+           
+        </div>
+        <div class="footer-info">
+            <p>VENIA</p>
+            <p>© Company Name, Address, City, ZIP</p>
+            <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+
+
+</body>
+</html>
